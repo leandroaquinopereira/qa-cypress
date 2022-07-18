@@ -1,0 +1,22 @@
+{
+  "name": "qa-cypress",
+  "version": "1.0.0",
+  "description": "QA with Cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leandroaquinopereira/qa-cypress.git"
+  },
+  "author": "Leandro Pereira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leandroaquinopereira/qa-cypress/issues"
+  },
+  "homepage": "https://github.com/leandroaquinopereira/qa-cypress#readme",
+  "devDependencies": {
+    "cypress": "^10.3.0"
+  }
+}
