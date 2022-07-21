@@ -8,3 +8,12 @@ Install Cypress
 
 Start CYpress and run test
 "npm run test"
+
+Run Tests on terminal
+npx cypress run
+
+Install packege of report 
+npm i -D mochawesome
+
+Run Test with MochaWesome Report
+npx cypress run --reporter mochawesome
