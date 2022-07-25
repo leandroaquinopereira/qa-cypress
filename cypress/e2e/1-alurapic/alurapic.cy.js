@@ -35,4 +35,16 @@ describe('Login & Registry of user on AluraPic', () => {
         cy.contains('ap-vmessage', 'Mininum length is 8').should('be.visible');
     })
 
+    it.only('login success', () => {
+      cy.login('flavio', '123');
+      cy.contains('a', '(Logout)').should('be.visible');
+    })
+
+    it.only('login fail', () => {
+      cy.login('jaqueline','1234');
+      cy.on('windows:alert', (str) => {
+        expect(str).to.equal('Invalid user name or password');
+      })
+    })
+
 })
