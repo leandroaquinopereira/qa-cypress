@@ -35,16 +35,31 @@ describe('Login & Registry of user on AluraPic', () => {
         cy.contains('ap-vmessage', 'Mininum length is 8').should('be.visible');
     })
 
-    it.only('login success', () => {
+    it('login success', () => {
       cy.login('flavio', '123');
       cy.contains('a', '(Logout)').should('be.visible');
     })
 
-    it.only('login fail', () => {
+    it('login fail', () => {
       cy.login('jaqueline','1234');
       cy.on('windows:alert', (str) => {
         expect(str).to.equal('Invalid user name or password');
       })
     })
+
+    const usuarios = require('../../fixtures/usuarios.json')
+    usuarios.forEach(usuario => {
+
+      it.only(`registra novo usuário ${usuario.userName}`, () => {
+        cy.contains('a', 'Register now').click();
+        cy.get('input[formcontrolname="email"]').type(usuario.email);
+        cy.get('input[formcontrolname="fullname"]').type(usuario.fullName);
+        cy.get('input[formcontrolname="userName"]').type(usuario.userName);
+        cy.get('input[formcontrolname="password"]').type(usuario.password);
+        cy.contains('button', 'Register').click();
+      })
+
+    })
+    
 
 })
