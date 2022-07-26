@@ -14,7 +14,7 @@ describe('Buscar fotos e dados', () =>{
 
     })
 
-    it.only('fazer login do flavio', () => {
+    it('fazer login do flavio', () => {
 
         cy.request({
             method: 'POST',

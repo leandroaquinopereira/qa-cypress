@@ -3,7 +3,7 @@ const { defineConfig } = require("cypress");
 module.exports = defineConfig({
   projectId: '1zb3vr',
   e2e: {
-
+    baseUrl: "https://alura-fotos.herokuapp.com",
     "reporter": "mochawesome",
     "reporterOptions": 
     {
@@ -11,8 +11,8 @@ module.exports = defineConfig({
       "overwrite": true,
       "html": true,
       "json": false,
-      "timestamp": "mmddyyyy_HHMMss"
-    }
+      "timestamp": "mmddyyyy_HHMMss",
+    },
 
   },
 });
