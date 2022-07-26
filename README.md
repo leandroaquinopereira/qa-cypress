@@ -17,3 +17,5 @@ npm i -D mochawesome
 
 Run Test with MochaWesome Report
 npx cypress run --reporter mochawesome
+
+cypress.env.json - pode armazenar variáveis que não podem ser compartilhadas
